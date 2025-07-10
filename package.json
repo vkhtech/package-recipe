@@ -1,0 +1,33 @@
+{
+  "name": "@vkhtech/package-recipe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "(jest && make-coverage-badge)"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.0.4",
+    "make-coverage-badge": "^1.2.0"
+  },
+  "jest": {
+    "verbose": true,
+    "coverageReporters": [
+      "json-summary",
+      [
+        "text",
+        {
+          "file": "coverage.txt",
+          "path": "./coverage"
+        }
+      ],
+      "lcov"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "./src/**"
+    ]
+  }
+}
